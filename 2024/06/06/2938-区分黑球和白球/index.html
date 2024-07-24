@@ -23,11 +23,17 @@
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
 <meta property="og:description" content="2938.区分黑球和白球桌子上有 n 个球，每个球的颜色不是黑色，就是白色。 给你一个长度为 n 、下标从 0 开始的二进制字符串 s，其中 1 和 0 分别代表黑色和白色的球。 在每一步中，你可以选择两个相邻的球并交换它们。 返回「将所有黑色球都移到右侧，所有白色球都移到左侧所需的 最小步数」。 示例 1： 12345输入：s &#x3D; &quot;101&quot;输出：1解释：我们可以按以下方式将">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:\HexoBlog\public\img\avatar.png">
+<meta property="og:image" content="d:\HexoBlog\public\img\avatar.png">
+<meta property="og:image" content="d:\HexoBlog\public\img\avatar.png">
+<meta property="og:image" content="d:\HexoBlog\public\img\avatar.png">
+<meta property="og:image" content="d:\HexoBlog\public\img\avatar.png">
 <meta property="article:published_time" content="2024-06-06T08:23:10.000Z">
-<meta property="article:modified_time" content="2024-06-06T09:14:34.598Z">
+<meta property="article:modified_time" content="2024-07-24T13:17:02.841Z">
 <meta property="article:author" content="Yang Zhiyuan">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="d:\HexoBlog\public\img\avatar.png">
   
   
   
@@ -220,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          663 字
+          764 字
         
       </span>
     
@@ -231,7 +237,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -302,6 +308,50 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">long</span> <span class="hljs-title function_">minimumSteps</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">cnt</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">long</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; <span class="hljs-comment">//注意int可能会导致溢出</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> c : s.toCharArray())&#123;<br>            <span class="hljs-keyword">if</span>(c == <span class="hljs-string">&#x27;1&#x27;</span>)&#123;<br>                cnt++;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(c == <span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br>                ans += cnt;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
+
+<div class="note note-primary">
+            <p>WARNING</p><p>使用时 <code>&lt;div class=&quot;note note-primary&quot;&gt;             &lt;p&gt;&lt;code&gt;和&lt;/code&gt;&lt;/p&gt;           &lt;/div&gt;</code> 需单独一行，否则会出现问题</p>
+          </div>
+
+
+
+<p>这个标签可以嵌入在正文里<span class="label label-danger">警告</span>就像这样。</p>
+
+    <div class="fold">
+      <div class="fold-title fold-into collapsed" data-toggle="collapse" href="#collapse-e6d2f0a0" role="button" aria-expanded="false" aria-controls="collapse-e6d2f0a0">
+        <div class="fold-arrow">▶</div>this is fold test
+      </div>
+      <div class="fold-collapse collapse" id="collapse-e6d2f0a0">
+        <div class="fold-content">
+          <p>fold</p><p>fold</p><p>fold</p><p>fold</p><p>fold</p><p>fold</p>
+        </div>
+      </div>
+    </div>
+
+
+
+<div>
+            <input type="checkbox"  >普通示例
+          </div>
+
+<div>
+            <input type="checkbox"  checked="checked">默认选中
+          </div>
+
+
+            <input type="checkbox"  >内联示例
+           后面文字不换行
+
+<input type="checkbox" disabled > 也可以只传入一个参数，文字写在后边（这样不支持外联）<br>
+
+
+
+<a class="btn" href="https://www.baidu.com"  title="what" target="_blank">button</a>
+
+
+
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="D:\HexoBlog\public\img\avatar.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="D:\HexoBlog\public\img\avatar.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="D:\HexoBlog\public\img\avatar.png" srcset="/img/loading.gif" lazyload></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="D:\HexoBlog\public\img\avatar.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="D:\HexoBlog\public\img\avatar.png" srcset="/img/loading.gif" lazyload></div></div></div>
+
                 
               </div>
             
@@ -370,15 +420,15 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/06/22/146-LRU%E7%BC%93%E5%AD%98/" title="146.LRU缓存">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">146.LRU缓存</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2024/06/02/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
