@@ -23,17 +23,13 @@
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
 <meta property="og:description" content="2938.区分黑球和白球桌子上有 n 个球，每个球的颜色不是黑色，就是白色。 给你一个长度为 n 、下标从 0 开始的二进制字符串 s，其中 1 和 0 分别代表黑色和白色的球。 在每一步中，你可以选择两个相邻的球并交换它们。 返回「将所有黑色球都移到右侧，所有白色球都移到左侧所需的 最小步数」。 示例 1： 12345输入：s &#x3D; &quot;101&quot;输出：1解释：我们可以按以下方式将">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/%5Cimg%5Cavatar.png">
-<meta property="og:image" content="http://example.com/%5Cimg%5Cavatar.png">
-<meta property="og:image" content="http://example.com/%5Cimg%5Cavatar.png">
-<meta property="og:image" content="http://example.com/%5Cimg%5Cavatar.png">
-<meta property="og:image" content="http://example.com/%5Cimg%5Cavatar.png">
 <meta property="article:published_time" content="2024-06-06T08:23:10.000Z">
-<meta property="article:modified_time" content="2024-07-24T13:28:15.790Z">
+<meta property="article:modified_time" content="2024-07-25T12:49:29.503Z">
 <meta property="article:author" content="Yang Zhiyuan">
-<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/%5Cimg%5Cavatar.png">
   
   
   
@@ -226,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          764 字
+          663 字
         
       </span>
     
@@ -237,7 +233,7 @@
         
         
         
-          7 分钟
+          6 分钟
         
       </span>
     
@@ -307,51 +303,6 @@
 <p>思考：当我们从头开始遍历字符串时，由于时要求最后的结果左边全是0，右边全是1，故当我们遇到0时，下意识的认为不需要做任何操作，因为0本来就应该在左边，这是错误的。当我们遇到0时，需要考虑左边有多少个1，有多少个1就需要交换几次。<em><strong>每次遇到1时，将其计数，每次遇到0时，若0左侧有1，则此时1一定是呈连续状分布在0的左侧，所以我们才说有多少个1就交换几次，对后续遍历也同理，即遇到1的时候增加1的计数器，遇到0的时候根据此时1的数量来增加相应的交换次数，最后返回交换次数即可。</strong></em></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">long</span> <span class="hljs-title function_">minimumSteps</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">cnt</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">long</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; <span class="hljs-comment">//注意int可能会导致溢出</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> c : s.toCharArray())&#123;<br>            <span class="hljs-keyword">if</span>(c == <span class="hljs-string">&#x27;1&#x27;</span>)&#123;<br>                cnt++;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(c == <span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br>                ans += cnt;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-
-
-<div class="note note-primary">
-            <p>WARNING</p><p>使用时 <code>&lt;div class=&quot;note note-primary&quot;&gt;             &lt;p&gt;&lt;code&gt;和&lt;/code&gt;&lt;/p&gt;           &lt;/div&gt;</code> 需单独一行，否则会出现问题</p>
-          </div>
-
-
-
-<p>这个标签可以嵌入在正文里<span class="label label-danger">警告</span>就像这样。</p>
-
-    <div class="fold">
-      <div class="fold-title fold-into collapsed" data-toggle="collapse" href="#collapse-e6d2f0a0" role="button" aria-expanded="false" aria-controls="collapse-e6d2f0a0">
-        <div class="fold-arrow">▶</div>this is fold test
-      </div>
-      <div class="fold-collapse collapse" id="collapse-e6d2f0a0">
-        <div class="fold-content">
-          <p>fold</p><p>fold</p><p>fold</p><p>fold</p><p>fold</p><p>fold</p>
-        </div>
-      </div>
-    </div>
-
-
-
-<div>
-            <input type="checkbox"  >普通示例
-          </div>
-
-<div>
-            <input type="checkbox"  checked="checked">默认选中
-          </div>
-
-
-            <input type="checkbox"  >内联示例
-           后面文字不换行
-
-<input type="checkbox" disabled > 也可以只传入一个参数，文字写在后边（这样不支持外联）<br>
-
-
-
-<a class="btn" href="https://www.baidu.com"  title="what" target="_blank">button</a>
-
-
-
-<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/%5Cimg%5Cavatar.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="/%5Cimg%5Cavatar.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="/%5Cimg%5Cavatar.png" srcset="/img/loading.gif" lazyload></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/%5Cimg%5Cavatar.png" srcset="/img/loading.gif" lazyload></div><div class="group-image-wrap"><img src="/%5Cimg%5Cavatar.png" srcset="/img/loading.gif" lazyload></div></div></div>
-
                 
               </div>
             
@@ -359,11 +310,43 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Leetcode/medium/" class="category-chain-item">medium</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/leetcode/" class="print-no-link">#leetcode</a>
+        <a href="/tags/%E8%B4%AA%E5%BF%83/" class="print-no-link">#贪心</a>
+      
+        <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" class="print-no-link">#双指针</a>
+      
+        <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="print-no-link">#字符串</a>
       
     </div>
   
