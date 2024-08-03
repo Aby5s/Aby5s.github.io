@@ -16,26 +16,22 @@
   <meta name="author" content="Yang Zhiyuan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="146.LRU缓存请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类：  LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 void put(int key, int value) 如果">
+    <meta name="description" content="第13课  机の上に本が三冊あります基本课文 すみません、葉書を五枚ください。 打扰一下，请给我五张明信片。 はい。五枚で二百五十円です。 好的，五张一共二百五十日元。 よく映画を見ますが？ （你）经常去看电影吗？ ええ、一か月に二回ぐらい見ます。 是的，一个月看两次左右。 家から会社までどのぐらいかかりますか？ 从家到公司大概要花费多长时间？ 電車で一時間ぐらいかかります。 乘电车一个小时左右。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="146.LRU缓存">
-<meta property="og:url" content="http://example.com/2024/06/22/146-LRU%E7%BC%93%E5%AD%98/index.html">
+<meta property="og:title" content="第13课  机の上に本が三冊あります">
+<meta property="og:url" content="http://example.com/2024/07/10/%E7%AC%AC13%E8%AF%BE%20%20%E6%9C%BA%E3%81%AE%E4%B8%8A%E3%81%AB%E6%9C%AC%E3%81%8C%E4%B8%89%E5%86%8A%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99/index.html">
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
-<meta property="og:description" content="146.LRU缓存请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类：  LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 void put(int key, int value) 如果">
+<meta property="og:description" content="第13课  机の上に本が三冊あります基本课文 すみません、葉書を五枚ください。 打扰一下，请给我五张明信片。 はい。五枚で二百五十円です。 好的，五张一共二百五十日元。 よく映画を見ますが？ （你）经常去看电影吗？ ええ、一か月に二回ぐらい見ます。 是的，一个月看两次左右。 家から会社までどのぐらいかかりますか？ 从家到公司大概要花费多长时间？ 電車で一時間ぐらいかかります。 乘电车一个小时左右。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/avatar.png">
-<meta property="article:published_time" content="2024-06-22T05:38:22.000Z">
-<meta property="article:modified_time" content="2024-07-24T11:52:58.653Z">
+<meta property="article:published_time" content="2024-07-10T03:35:17.000Z">
+<meta property="article:modified_time" content="2024-08-03T09:49:39.956Z">
 <meta property="article:author" content="Yang Zhiyuan">
-<meta property="article:tag" content="哈希表">
-<meta property="article:tag" content="链表">
-<meta property="article:tag" content="双向链表">
+<meta property="article:tag" content="课文">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/avatar.png">
   
   
   
-  <title>146.LRU缓存 - Aby5s&#39;s Blog</title>
+  <title>第13课  机の上に本が三冊あります - Aby5s&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="146.LRU缓存"></span>
+            <span id="subtitle" data-typed-text="第13课  机の上に本が三冊あります"></span>
           
         </div>
 
@@ -212,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-22 13:38" pubdate>
-          2024年6月22日 下午
+        <time datetime="2024-07-10 11:35" pubdate>
+          2024年7月10日 中午
         </time>
       </span>
     
@@ -224,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          357 字
+          1.1k 字
         
       </span>
     
@@ -235,7 +231,7 @@
         
         
         
-          3 分钟
+          9 分钟
         
       </span>
     
@@ -272,29 +268,231 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">146.LRU缓存</h1>
+            <h1 id="seo-header">第13课  机の上に本が三冊あります</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="146-LRU缓存"><a href="#146-LRU缓存" class="headerlink" title="146.LRU缓存"></a>146.LRU缓存</h2><p>请你设计并实现一个满足 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/LRU">LRU (最近最少使用) 缓存</a> 约束的数据结构。</p>
-<p>实现 <code>LRUCache</code> 类：</p>
-<ul>
-<li><code>LRUCache(int capacity)</code> 以 <strong>正整数</strong> 作为容量 <code>capacity</code> 初始化 LRU 缓存</li>
-<li><code>int get(int key)</code> 如果关键字 <code>key</code> 存在于缓存中，则返回关键字的值，否则返回 <code>-1</code> 。</li>
-<li><code>void put(int key, int value)</code> 如果关键字 <code>key</code> 已经存在，则变更其数据值 <code>value</code> ；如果不存在，则向缓存中插入该组 <code>key-value</code> 。如果插入操作导致关键字数量超过 <code>capacity</code> ，则应该 <strong>逐出</strong> 最久未使用的关键字。</li>
-</ul>
-<p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs haxe">输入<br>[<span class="hljs-string">&quot;LRUCache&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>]<br>[[<span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>], [<span class="hljs-number">4</span>]]<br>输出<br>[<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">-1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br><br>解释<br>LRUCache lRUCache = <span class="hljs-keyword">new</span> <span class="hljs-type">LRUCache</span>(<span class="hljs-number">2</span>);<br>lRUCache.put(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// 缓存是 &#123;1=1&#125;</span><br>lRUCache.put(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 缓存是 &#123;1=1, 2=2&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 返回 1</span><br>lRUCache.put(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 该操作会使得关键字 2 作废，缓存是 &#123;1=1, 3=3&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">2</span>);    <span class="hljs-comment">// 返回 -1 (未找到)</span><br>lRUCache.put(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// 该操作会使得关键字 1 作废，缓存是 &#123;4=4, 3=3&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 返回 -1 (未找到)</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">3</span>);    <span class="hljs-comment">// 返回 3</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">4</span>);    <span class="hljs-comment">// 返回 4</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= capacity &lt;= 3000</code></li>
-<li><code>0 &lt;= key &lt;= 10000</code></li>
-<li><code>0 &lt;= value &lt;= 105</code></li>
-<li>最多调用 <code>2 * 105</code> 次 <code>get</code> 和 <code>put</code></li>
-</ul>
+                <h2 id="第13课-机の上に本が三冊あります"><a href="#第13课-机の上に本が三冊あります" class="headerlink" title="第13课  机の上に本が三冊あります"></a>第13课  机の上に本が三冊あります</h2><p><strong>基本课文</strong></p>
+<p>すみません、葉書を五枚ください。</p>
+<p><em>打扰一下，请给我五张明信片。</em></p>
+<p>はい。五枚で二百五十円です。</p>
+<p><em>好的，五张一共二百五十日元。</em></p>
+<p>よく映画を見ますが？</p>
+<p><em>（你）经常去看电影吗？</em></p>
+<p>ええ、一か月に二回ぐらい見ます。</p>
+<p><em>是的，一个月看两次左右</em>。</p>
+<p>家から会社までどのぐらいかかりますか？</p>
+<p><em>从家到公司大概要花费多长时间？</em></p>
+<p>電車で一時間ぐらいかかります。</p>
+<p><em>乘电车一个小时左右</em>。</p>
+<p>昨日何をしましたか？</p>
+<p><em>昨天做了什么？</em></p>
+<p>新宿へ映画を見に行きました。</p>
+<p><em>去新宿看了电影。</em></p>
+<p><strong>词汇记忆</strong></p>
+<p>二百五十円　にひゃくごじゅうえん　</p>
+<p>映画　えいが　电影</p>
+<p>見る　みる　看</p>
+<p>どのぐらいかかりますか　花费（时间、金钱）</p>
+<p>一時間　いちじかん　一个小时</p>
+<p>新宿　しんじゅく　新宿</p>
+<p>週に二回　⇒　一週間に二回（いっしゅうかんに　にかい）　一周两次</p>
+<p>生ビールを三つ　三杯生啤酒</p>
+<p>くらい／ぐらい　大概（接着数量词的后面）</p>
+<p>どのぐらい　かかりますか　大概花费多少呢</p>
+<p>飲みに行きます　去喝（酒） 当没有明确说明喝什么的时候</p>
+<p>とりあえず　先…其余的待定，常用于点菜</p>
+<p>荷物　にもつ　包裹</p>
+<p>葉書　はがき　明信片</p>
+<p>切手　きって　邮票</p>
+<p>引き出し　ひきだし　抽屉</p>
+<p>アルバム　相册</p>
+<p>タバコ　烟草</p>
+<p>漫画　まんが　漫画</p>
+<p>ガレージ　车库</p>
+<p>修理　しゅうり　修理</p>
+<p>居酒屋　いざかや　居酒屋</p>
+<p>生ビール　なまビール　生啤酒</p>
+<p>焼き鳥　やきとり　烤鸡肉串</p>
+<p>唐揚げ　からあげ　炸鸡</p>
+<p>肉じゃが　にくじゃが　土豆牛肉</p>
+<p>ボーリング　保龄球</p>
+<p>髪　かみ　头发</p>
+<p>象　ぞう　大象</p>
+<p>昼　ひる　白天</p>
+<p>他　ほか　其他</p>
+<p>咲く　さく　开花</p>
+<p>泳ぐ　およぐ　游泳</p>
+<p>遊ぶ　あそぶ　玩耍</p>
+<p>吸う　すう　吸</p>
+<p>切る　きる　切</p>
+<p>大体　だいたい　大概</p>
+<p>とりあえず　暂且</p>
+<p><strong>语法复习</strong></p>
+<ol>
+<li><strong>名词【数量】+ 动词</strong></li>
+</ol>
+<p>​	卵を一個食べます</p>
+<p>​	本を二冊買いました</p>
+<p>​	緑茶を三杯飲みました</p>
+<p><strong>量词表</strong></p>
+<table>
+<thead>
+<tr>
+<th>量词</th>
+<th>使用对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>～人　にん</td>
+<td>人</td>
+</tr>
+<tr>
+<td>～台　だい</td>
+<td>机械或车辆</td>
+</tr>
+<tr>
+<td>～枚　まい</td>
+<td>薄平物体:纸、盘子..</td>
+</tr>
+<tr>
+<td>～冊　さつ</td>
+<td>书、笔记本</td>
+</tr>
+<tr>
+<td>～歳　さい</td>
+<td>年龄</td>
+</tr>
+<tr>
+<td>～回　かい</td>
+<td>次数</td>
+</tr>
+<tr>
+<td>～着　ちゃく</td>
+<td>衣服等</td>
+</tr>
+<tr>
+<td>～個　こ</td>
+<td>立体的物品、空容器、抽象的东西</td>
+</tr>
+<tr>
+<td>～本　ほん</td>
+<td>细长物品：瓶、铅笔、伞</td>
+</tr>
+<tr>
+<td>～杯　はい</td>
+<td>容器里的饮料：茶、咖啡</td>
+</tr>
+<tr>
+<td>～匹　ひき</td>
+<td>小动物</td>
+</tr>
+<tr>
+<td>～頭　とう</td>
+<td>大动物</td>
+</tr>
+<tr>
+<td>～羽　わ</td>
+<td>鸟、兔</td>
+</tr>
+<tr>
+<td>～番　ばん</td>
+<td>顺序</td>
+</tr>
+<tr>
+<td>～足　そく</td>
+<td>成对的物品：鞋、袜子等</td>
+</tr>
+<tr>
+<td>~つ</td>
+<td>1~9岁的年龄、立体的东西、抽象的东西</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li><strong>名词【时间】+ 动词</strong></li>
+</ol>
+<p>​	表示时间的名词与动词连用时，表示动作持续的时间。</p>
+<p>​	李さんは毎日七時間働きます。</p>
+<p>​	<em>小李每天睡七小时。</em></p>
+<p>​	昼一時間休みます。</p>
+<p>​	<em>白天休息一小时。</em></p>
+<ol start="3">
+<li><strong>名词【时间】+ に + 次数 + 动词</strong></li>
+</ol>
+<p>​	表示在一段时间内做了若干次xx动作。</p>
+<p>​	李さんは一時間に二回プールへ行きます。</p>
+<p>​	<em>小李一周去两次游泳池。</em></p>
+<p>​	この花は二年に一度咲きます。</p>
+<p>​	这个❀两年开一次。</p>
+<ol start="4">
+<li><strong>ます型去ます</strong></li>
+</ol>
+<p>​	剩下的部分叫 <strong>连用形</strong></p>
+<table>
+<thead>
+<tr>
+<th>ます形</th>
+<th>去掉ます（连用形）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>働きます</td>
+<td>働き</td>
+</tr>
+<tr>
+<td>休みます</td>
+<td>休み</td>
+</tr>
+<tr>
+<td>起きます</td>
+<td>起き</td>
+</tr>
+<tr>
+<td>寝ます</td>
+<td>寝</td>
+</tr>
+</tbody></table>
+<p>​	</p>
+<p>5.　<strong>名词【场所】+ へ + 动词 + に　+　行きます／来ます</strong></p>
+<p>​	这里的动词使用的就是连用形，表示移动行为的目的时使用。</p>
+<p>​	午後郵便局へ荷物を出しに行きます。</p>
+<p>​	<em>下午去邮局寄包裹。</em></p>
+<p>​	小野さんはプールへ泳ぎに行きます。</p>
+<p>​	<em>小野去游泳池游泳。</em></p>
+<p>​	李さんは私の家へ遊びに来ました。</p>
+<p>​	<em>小李来我家玩了。</em></p>
+<p>6.　<strong>数量 + で</strong></p>
+<p>​	用于不称重而以数量的方式出售。</p>
+<p>​	このケーキは三個で五百円です。</p>
+<p>​	<em>这种蛋糕五百日元三个。</em></p>
+<p><strong>应用课文</strong></p>
+<p>小野：（わたしは）これから森さんと近くのお店へ飲みに行きます。李さんも一緒にどうですか。</p>
+<p><em>小野：（我）马上就和小森去附近的店里喝酒，小李也一起来吗？</em></p>
+<p>李：えっ、いいですか。お願いします。</p>
+<p><em>李：誒，真的吗？那就拜托了。</em></p>
+<p>李：森さんたちはこのお店へよく来ますか。</p>
+<p><em>李：小森们经常来这个店吗？</em></p>
+<p>森：ええ、僕は週に二回ぐらい来ます。</p>
+<p><em>森：是的。我一周来两次左右</em></p>
+<p>小野：私もよく来ます。</p>
+<p><em>小野：我也经常来。</em></p>
+<p>森：あのう、すみません。とりあえず生ビールを三つお願いします。</p>
+<p><em>森：那个，打扰一下。就先点三杯生啤酒吧，拜托了。</em></p>
+<p>李：生ビールが一杯三百円ですか。</p>
+<p><em>李：生啤酒一杯三百日元吗？</em></p>
+<p>森：ここはお酒も食べ物も安いです。焼き鳥は五本で四百円ですからね。</p>
+<p><em>森：这里的酒、食物都便宜。因此烤鸡肉五串四百日元。</em></p>
+<p>小野：唐揚げや肉じゃがは一皿三百五十円です。</p>
+<p><em>小野：炸鸡块和土豆炖肉一盘三百五十日元。</em></p>
+<p>李：他のお店はいくらぐらいですか？</p>
+<p><em>李：其他的店大概多少钱呢？</em></p>
+<p>森：生ビールは大体一杯四百円か四百五十円ですね。</p>
+<p><em>森：生啤酒大概一杯四百日元或者四百五十日元。</em></p>
+<p>小野：焼き鳥は一本一百五十円ぐらいですよ。</p>
+<p><em>小野：烤鸡肉一串大概一百五十日元左右。</em></p>
+<p>李：じゃあ、ここは安いですね。</p>
+<p><em>李：啊，这里确实很便宜。</em></p>
 
                 
               </div>
@@ -303,15 +501,39 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%97%A5%E8%AF%AD/" class="category-chain-item">日语</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E4%B8%8A%EF%BC%8C%E8%AF%BE%E6%96%87/" class="category-chain-item">新标日初级上，课文</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="print-no-link">#哈希表</a>
-      
-        <a href="/tags/%E9%93%BE%E8%A1%A8/" class="print-no-link">#链表</a>
-      
-        <a href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" class="print-no-link">#双向链表</a>
+        <a href="/tags/%E8%AF%BE%E6%96%87/" class="print-no-link">#课文</a>
       
     </div>
   
@@ -323,8 +545,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>146.LRU缓存</div>
-      <div>http://example.com/2024/06/22/146-LRU缓存/</div>
+      <div>第13课  机の上に本が三冊あります</div>
+      <div>http://example.com/2024/07/10/第13课  机の上に本が三冊あります/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +558,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年6月22日</div>
+          <div>2024年7月10日</div>
         </div>
       
       
@@ -368,9 +590,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/10/%E7%AC%AC13%E8%AF%BE%20%20%E6%9C%BA%E3%81%AE%E4%B8%8A%E3%81%AB%E6%9C%AC%E3%81%8C%E4%B8%89%E5%86%8A%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99/" title="第13课  机の上に本が三冊あります">
+                      <a href="/2024/07/13/%E7%AC%AC14%E8%AF%BE%20%20%E6%98%A8%E6%97%A5%E3%83%87%E3%83%91%E3%83%BC%E3%83%88%E3%81%B8%E8%A1%8C%E3%81%A3%E3%81%A6%EF%BC%8C%E8%B2%B7%E3%81%84%E7%89%A9%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" title="第14课  昨日デパートへ行って，買い物しました">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第13课  机の上に本が三冊あります</span>
+                        <span class="hidden-mobile">第14课  昨日デパートへ行って，買い物しました</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -378,8 +600,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/06/2938-%E5%8C%BA%E5%88%86%E9%BB%91%E7%90%83%E5%92%8C%E7%99%BD%E7%90%83/" title="2938.区分黑球和白球">
-                        <span class="hidden-mobile">2938.区分黑球和白球</span>
+                      <a href="/2024/06/22/146-LRU%E7%BC%93%E5%AD%98/" title="146.LRU缓存">
+                        <span class="hidden-mobile">146.LRU缓存</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

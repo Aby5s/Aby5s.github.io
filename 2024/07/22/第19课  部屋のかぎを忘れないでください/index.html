@@ -16,26 +16,22 @@
   <meta name="author" content="Yang Zhiyuan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="146.LRU缓存请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类：  LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 void put(int key, int value) 如果">
+    <meta name="description" content="第19课 部屋のかぎを忘れないでください基本课文 その品物に触らないでください。 あっ，すみません。 李さんは，一緒に食事に行きませんか。 すみません。今日は早く帰って，レポートを書かなけねばなりません。 今天必须要早点回去，然后写报告。 先生，もう薬を飲まなくてもいいですか。 先生，不吃药也可以了吗？ はい，いいですよ。 吉田課長はいますか。 私が吉田ですが… 语法解释  动词的ない形  ​	否">
 <meta property="og:type" content="article">
-<meta property="og:title" content="146.LRU缓存">
-<meta property="og:url" content="http://example.com/2024/06/22/146-LRU%E7%BC%93%E5%AD%98/index.html">
+<meta property="og:title" content="第19课  部屋のかぎを忘れないでください">
+<meta property="og:url" content="http://example.com/2024/07/22/%E7%AC%AC19%E8%AF%BE%20%20%E9%83%A8%E5%B1%8B%E3%81%AE%E3%81%8B%E3%81%8E%E3%82%92%E5%BF%98%E3%82%8C%E3%81%AA%E3%81%84%E3%81%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84/index.html">
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
-<meta property="og:description" content="146.LRU缓存请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类：  LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 void put(int key, int value) 如果">
+<meta property="og:description" content="第19课 部屋のかぎを忘れないでください基本课文 その品物に触らないでください。 あっ，すみません。 李さんは，一緒に食事に行きませんか。 すみません。今日は早く帰って，レポートを書かなけねばなりません。 今天必须要早点回去，然后写报告。 先生，もう薬を飲まなくてもいいですか。 先生，不吃药也可以了吗？ はい，いいですよ。 吉田課長はいますか。 私が吉田ですが… 语法解释  动词的ない形  ​	否">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/avatar.png">
-<meta property="article:published_time" content="2024-06-22T05:38:22.000Z">
-<meta property="article:modified_time" content="2024-07-24T11:52:58.653Z">
+<meta property="article:published_time" content="2024-07-22T01:12:22.000Z">
+<meta property="article:modified_time" content="2024-08-03T09:47:01.458Z">
 <meta property="article:author" content="Yang Zhiyuan">
-<meta property="article:tag" content="哈希表">
-<meta property="article:tag" content="链表">
-<meta property="article:tag" content="双向链表">
+<meta property="article:tag" content="课文">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/avatar.png">
   
   
   
-  <title>146.LRU缓存 - Aby5s&#39;s Blog</title>
+  <title>第19课  部屋のかぎを忘れないでください - Aby5s&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="146.LRU缓存"></span>
+            <span id="subtitle" data-typed-text="第19课  部屋のかぎを忘れないでください"></span>
           
         </div>
 
@@ -212,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-22 13:38" pubdate>
-          2024年6月22日 下午
+        <time datetime="2024-07-22 09:12" pubdate>
+          2024年7月22日 上午
         </time>
       </span>
     
@@ -224,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          357 字
+          663 字
         
       </span>
     
@@ -235,7 +231,7 @@
         
         
         
-          3 分钟
+          6 分钟
         
       </span>
     
@@ -272,29 +268,103 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">146.LRU缓存</h1>
+            <h1 id="seo-header">第19课  部屋のかぎを忘れないでください</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="146-LRU缓存"><a href="#146-LRU缓存" class="headerlink" title="146.LRU缓存"></a>146.LRU缓存</h2><p>请你设计并实现一个满足 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/LRU">LRU (最近最少使用) 缓存</a> 约束的数据结构。</p>
-<p>实现 <code>LRUCache</code> 类：</p>
-<ul>
-<li><code>LRUCache(int capacity)</code> 以 <strong>正整数</strong> 作为容量 <code>capacity</code> 初始化 LRU 缓存</li>
-<li><code>int get(int key)</code> 如果关键字 <code>key</code> 存在于缓存中，则返回关键字的值，否则返回 <code>-1</code> 。</li>
-<li><code>void put(int key, int value)</code> 如果关键字 <code>key</code> 已经存在，则变更其数据值 <code>value</code> ；如果不存在，则向缓存中插入该组 <code>key-value</code> 。如果插入操作导致关键字数量超过 <code>capacity</code> ，则应该 <strong>逐出</strong> 最久未使用的关键字。</li>
-</ul>
-<p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs haxe">输入<br>[<span class="hljs-string">&quot;LRUCache&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>]<br>[[<span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>], [<span class="hljs-number">4</span>]]<br>输出<br>[<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">-1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br><br>解释<br>LRUCache lRUCache = <span class="hljs-keyword">new</span> <span class="hljs-type">LRUCache</span>(<span class="hljs-number">2</span>);<br>lRUCache.put(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// 缓存是 &#123;1=1&#125;</span><br>lRUCache.put(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 缓存是 &#123;1=1, 2=2&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 返回 1</span><br>lRUCache.put(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 该操作会使得关键字 2 作废，缓存是 &#123;1=1, 3=3&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">2</span>);    <span class="hljs-comment">// 返回 -1 (未找到)</span><br>lRUCache.put(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// 该操作会使得关键字 1 作废，缓存是 &#123;4=4, 3=3&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 返回 -1 (未找到)</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">3</span>);    <span class="hljs-comment">// 返回 3</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">4</span>);    <span class="hljs-comment">// 返回 4</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= capacity &lt;= 3000</code></li>
-<li><code>0 &lt;= key &lt;= 10000</code></li>
-<li><code>0 &lt;= value &lt;= 105</code></li>
-<li>最多调用 <code>2 * 105</code> 次 <code>get</code> 和 <code>put</code></li>
-</ul>
+                <h3 id="第19课-部屋のかぎを忘れないでください"><a href="#第19课-部屋のかぎを忘れないでください" class="headerlink" title="第19课 部屋のかぎを忘れないでください"></a>第19课 部屋のかぎを忘れないでください</h3><p><strong>基本课文</strong></p>
+<p>その品物に触らないでください。</p>
+<p>あっ，すみません。</p>
+<p>李さんは，一緒に食事に行きませんか。</p>
+<p>すみません。今日は早く帰って，レポートを書かなけねばなりません。</p>
+<p><em>今天必须要早点回去，然后写报告。</em></p>
+<p>先生，もう薬を飲まなくてもいいですか。</p>
+<p><em>先生，不吃药也可以了吗？</em></p>
+<p>はい，いいですよ。</p>
+<p>吉田課長はいますか。</p>
+<p>私が吉田ですが…</p>
+<p><strong>语法解释</strong></p>
+<ol>
+<li><strong>动词的ない形</strong></li>
+</ol>
+<p>​	否定形式，变换方法如下：</p>
+<p>​	<strong>一类动词</strong>：把ます形去掉ます后，最后一个音变成相应的あ段音，后加ない。</p>
+<p>​	<strong>二类动词</strong>：把ます形去掉ます后，直接加ない。</p>
+<p>​	<strong>三类动词</strong>：くる ⇒ こない　する ⇒ しない。</p>
+<ol start="2">
+<li><strong>动词 + ないでください</strong></li>
+</ol>
+<p>​	表示请不要做某事。构成方式为：ない形 + で + ください</p>
+<p>​	部屋のかぎを忘れないでください。</p>
+<p>​	请不要忘记房间的钥匙。</p>
+<ol start="3">
+<li><strong>动词 + なけねばなりません</strong></li>
+</ol>
+<p>​	表示必须做某事。接续方法是将动词ない形中的ない换成なければ　なりません，或者换成ないと　いけません。</p>
+<p>​	李さんは今日早く帰らなければなりません。</p>
+<p>​	この薬を毎日飲まなければなりません。</p>
+<p>​	直ぐに書類を送らないといけません。</p>
+<ol start="4">
+<li><strong>动词 + なくてもいいです</strong></li>
+</ol>
+<p>​	表示不做某事也可以，意思上相当于~なければなりません的否定。接续方法是将动词ない形的ない换なくてもいいです。</p>
+<p>​	明日は残業しなくてもいいです。</p>
+<p>​	慌てなくてもいいです。</p>
+<p>​	靴を脱がなくてもいいです。</p>
+<ol start="5">
+<li><strong>名词1 + ガ + 名词2 + です</strong></li>
+</ol>
+<p>​	新信息做主语时用が来表示，其余时候用は来表示主语即可。</p>
+<p>​	<em>何、だれ、どこ、いつ等表示疑问的词作主语时不能用わ，只能用が，因为这些词不能表示旧信息。</em></p>
+<p><strong>表达及词语讲解</strong></p>
+<ol>
+<li><strong>～なけねばなりません 和 ～ないといけません</strong></li>
+</ol>
+<p>​	两者都是表示“必须”的说法，只不过前者表示的更为正式一些。注意到，在口语表达中，常说~ないと，省略后半部分，同样可以表达必须的意思。</p>
+<p>​	子供は六歳から学校へ行かなけねばなりません。</p>
+<p>​	<em>从六岁起，孩子必须上学。</em></p>
+<p>​	あっ，八時ですね。もう駅へ<strong>行かないと</strong>（いけません）。</p>
+<p>​	啊，八点了。我得去车站了。</p>
+<ol start="2">
+<li><strong>初心者、上級者</strong></li>
+</ol>
+<p>​	初学者、高级学者</p>
+<ol start="3">
+<li><strong>何度も</strong></li>
+</ol>
+<p>​	好几次。本课的“何 ＋ 量词 + も + 肯定形式”是表示数量多的说法。</p>
+<p>​	何度も（好几次）、何杯も（好几杯）</p>
+<ol start="4">
+<li><strong>だいぶ</strong></li>
+</ol>
+<p>​	表示程度的副词，表示程度相当高。用于“～なりました”等表示变化的句型中时，突出强调变化的过程。</p>
+<p>​	昨日はだいぶお酒を飲みました。</p>
+<p>​	<em>昨天喝了不少酒。</em></p>
+<ol start="5">
+<li><strong>大丈夫です</strong></li>
+</ol>
+<p>​	表示“没问题、可以”的意思。</p>
+<ol start="6">
+<li><strong>残業</strong></li>
+</ol>
+<p>​	表示“加班”。</p>
+<p><strong>应用课文</strong></p>
+<p>小野さん，初めてですから，ちょっと怖いです。</p>
+<p>心配しなくてもいいですよ。ここは初心者コースですから。</p>
+<p>森さん，小野さん，待ってください。先に行かないでください。</p>
+<p>急がなくてもいいですよ。私たちもゆっくり滑りますから。</p>
+<p>李さん，スキーはどうですか。</p>
+<p>何度も転びましたが，とても面白いです。</p>
+<p>そうですか。だいぶ上手になりましたよ。</p>
+<p>本当ですか。でも，もっと上手に<strong>なりたいです</strong>。</p>
+<blockquote>
+<p>补充：动词连用形（去ます形） + たいです 表示想做某事。另一种表示想要的说法是，名词 + <strong>が</strong>欲しいです。</p>
+</blockquote>
+<p>じゃあ，もっと練習しなけねばなりませんね。もう一度滑りますか。</p>
+<p>はい。今度は先に滑ってもいいですか。</p>
+<p>いいですよ。でも，上級者のコースには入らないでください。</p>
+<p>大丈夫です。心配しないでください。</p>
 
                 
               </div>
@@ -303,15 +373,39 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%97%A5%E8%AF%AD/" class="category-chain-item">日语</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E4%B8%8A%EF%BC%8C%E8%AF%BE%E6%96%87/" class="category-chain-item">新标日初级上，课文</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="print-no-link">#哈希表</a>
-      
-        <a href="/tags/%E9%93%BE%E8%A1%A8/" class="print-no-link">#链表</a>
-      
-        <a href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" class="print-no-link">#双向链表</a>
+        <a href="/tags/%E8%AF%BE%E6%96%87/" class="print-no-link">#课文</a>
       
     </div>
   
@@ -323,8 +417,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>146.LRU缓存</div>
-      <div>http://example.com/2024/06/22/146-LRU缓存/</div>
+      <div>第19课  部屋のかぎを忘れないでください</div>
+      <div>http://example.com/2024/07/22/第19课  部屋のかぎを忘れないでください/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +430,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年6月22日</div>
+          <div>2024年7月22日</div>
         </div>
       
       
@@ -368,9 +462,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/10/%E7%AC%AC13%E8%AF%BE%20%20%E6%9C%BA%E3%81%AE%E4%B8%8A%E3%81%AB%E6%9C%AC%E3%81%8C%E4%B8%89%E5%86%8A%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99/" title="第13课  机の上に本が三冊あります">
+                      <a href="/2024/07/25/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" title="1-两数之和">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第13课  机の上に本が三冊あります</span>
+                        <span class="hidden-mobile">1-两数之和</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -378,8 +472,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/06/2938-%E5%8C%BA%E5%88%86%E9%BB%91%E7%90%83%E5%92%8C%E7%99%BD%E7%90%83/" title="2938.区分黑球和白球">
-                        <span class="hidden-mobile">2938.区分黑球和白球</span>
+                      <a href="/2024/07/19/%E7%AC%AC18%E8%AF%BE%20%20%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1%E3%81%AF%E3%81%A8%E3%81%A6%E3%82%82%E5%B0%8F%E3%81%95%E3%81%8F%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/" title="第18课  携帯電話はとても小さくなりました">
+                        <span class="hidden-mobile">第18课  携帯電話はとても小さくなりました</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
