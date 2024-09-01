@@ -16,22 +16,26 @@
   <meta name="author" content="Yang Zhiyuan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第20课 　スミスさんはピアノを弾くことができます基本课文 李さんは車を運転することができますか。 はい，できます。 ここで写真を撮ってもいいですか。 いいえ，ここでは摂ることができません。 何か趣味がありますか。 ええ。音楽を聞くことです。 森さんはいつギターを練習しますか。 毎晩，寝る前に練習します。 语法解释  动词的“基本型”  ​	基本型 &#x3D; 原形，是动词最基础的形态，可以理解">
+    <meta name="description" content="146. LRU缓存请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类：  LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 void put(int key, int value) 如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第20课  スミスさんはピアノを弾くことができます">
-<meta property="og:url" content="http://example.com/2024/07/25/%E7%AC%AC20%E8%AF%BE%20%20%E3%82%B9%E3%83%9F%E3%82%B9%E3%81%95%E3%82%93%E3%81%AF%E3%83%94%E3%82%A2%E3%83%8E%E3%82%92%E5%BC%BE%E3%81%8F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99/index.html">
+<meta property="og:title" content="146.LRU缓存">
+<meta property="og:url" content="http://example.com/2024/06/22/146.LRU%E7%BC%93%E5%AD%98/index.html">
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
-<meta property="og:description" content="第20课 　スミスさんはピアノを弾くことができます基本课文 李さんは車を運転することができますか。 はい，できます。 ここで写真を撮ってもいいですか。 いいえ，ここでは摂ることができません。 何か趣味がありますか。 ええ。音楽を聞くことです。 森さんはいつギターを練習しますか。 毎晩，寝る前に練習します。 语法解释  动词的“基本型”  ​	基本型 &#x3D; 原形，是动词最基础的形态，可以理解">
+<meta property="og:description" content="146. LRU缓存请你设计并实现一个满足 LRU (最近最少使用) 缓存 约束的数据结构。 实现 LRUCache 类：  LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化 LRU 缓存 int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。 void put(int key, int value) 如">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-25T14:20:03.000Z">
-<meta property="article:modified_time" content="2024-08-03T09:46:54.279Z">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2024-06-22T05:38:22.000Z">
+<meta property="article:modified_time" content="2024-09-01T14:10:32.839Z">
 <meta property="article:author" content="Yang Zhiyuan">
-<meta property="article:tag" content="课文">
+<meta property="article:tag" content="哈希表">
+<meta property="article:tag" content="链表">
+<meta property="article:tag" content="双向链表">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/avatar.png">
   
   
   
-  <title>第20课  スミスさんはピアノを弾くことができます - Aby5s&#39;s Blog</title>
+  <title>146.LRU缓存 - Aby5s&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第20课  スミスさんはピアノを弾くことができます"></span>
+            <span id="subtitle" data-typed-text="146.LRU缓存"></span>
           
         </div>
 
@@ -208,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-25 22:20" pubdate>
-          2024年7月25日 晚上
+        <time datetime="2024-06-22 13:38" pubdate>
+          2024年6月22日 下午
         </time>
       </span>
     
@@ -220,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          406 字
+          357 字
         
       </span>
     
@@ -231,7 +235,7 @@
         
         
         
-          4 分钟
+          3 分钟
         
       </span>
     
@@ -268,74 +272,29 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第20课  スミスさんはピアノを弾くことができます</h1>
+            <h1 id="seo-header">146.LRU缓存</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="第20课-スミスさんはピアノを弾くことができます"><a href="#第20课-スミスさんはピアノを弾くことができます" class="headerlink" title="第20课 　スミスさんはピアノを弾くことができます"></a>第20课 　スミスさんはピアノを弾くことができます</h3><p><strong>基本课文</strong></p>
-<p>李さんは車を運転することができますか。</p>
-<p>はい，できます。</p>
-<p>ここで写真を撮ってもいいですか。</p>
-<p>いいえ，ここでは摂ることができません。</p>
-<p>何か趣味がありますか。</p>
-<p>ええ。音楽を聞くことです。</p>
-<p>森さんはいつギターを練習しますか。</p>
-<p>毎晩，寝る前に練習します。</p>
-<p><strong>语法解释</strong></p>
-<ol>
-<li><strong>动词的“基本型”</strong></li>
-</ol>
-<p>​	基本型 &#x3D; 原形，是动词最基础的形态，可以理解为其他所有形式都可由基本型变化而来。</p>
-<p>​	如果想将动词的 ます 形变为动词原形，那么：</p>
-<blockquote>
-<p>​	一类动词：去掉 ます，然后将结尾由 い 段变为 う 段。</p>
-<p>​	例如：書きます　⇒　書く　待ちます　⇒　待つ</p>
-</blockquote>
-<blockquote>
-<p>​	二类动词：去掉 ます 直接加 る。</p>
-<p>​	例如：食べます　⇒　食べる　見ます　⇒　見る</p>
-</blockquote>
-<blockquote>
-<p>​	三类动词：固定变法。</p>
-<p>​	例如：来ます　⇒　くる　します　⇒　する</p>
-</blockquote>
-<ol start="2">
-<li><strong>名词（人）+ は + 动词基本型 + ことができます</strong></li>
-</ol>
-<p>​	询问某人是否有能力做某事，こと是形式名词，本质上是把其前面的动词名词化。</p>
-<p>​	スミスさんはピアノを弾くことができます。</p>
-<p>​	森さんは中華料理を作ることができますか。</p>
-<p>​	‐　はい，できます。</p>
-<ol start="3">
-<li><strong>名词 + は + 动词基本型 + ことです</strong></li>
-</ol>
-<p>​	当谓语部分内容是动作或行为时使用。</p>
-<p>​	私の趣味は切手を集めることです。</p>
-<ol start="4">
-<li><strong>动词基本形 + 前に</strong></li>
-</ol>
-<p>​	表示一个动作在另一个动作之前发生。</p>
-<p>​	こちらへ来る前に電話をかけてください。</p>
-<ol start="5">
-<li><strong>疑问词 + か</strong></li>
-</ol>
-<p>​	表示 “某x”，いつか　⇒　某时、 どこか　⇒　某地、 誰か　⇒　某人</p>
-<p>​	</p>
-<p><strong>应用课文</strong></p>
-<p>李さん，春節は中国へ帰りますか。</p>
-<p>いいえ，今日本の仕事が忙しいですから，帰りません。</p>
-<p>じゃあ，一緒に何処かへ行きませんか。</p>
-<p>横浜の中華街へ行きましょうよ。中国の獅子舞を見るかとができますよ。</p>
-<p>料理はどうでいたか。</p>
-<p>とても美味しかったですよ。特にギョーザは。</p>
-<p>李さんはギョーザを作ることができますか。</p>
-<p>ええ。北京では春節の前に，家族みんなでギョーザを作ります。</p>
-<p>手作りのギョーザは皮が美味しいですよね。</p>
-<p>小野さんも作ることができますか。</p>
-<p>ええ，もちろん。私の趣味は美味しい物を作ることですから。</p>
-<p>本当ですか？じゃあ，いつか御馳走してください。</p>
-<p>いいですよ。李さんが帰国する前に，ぜひ一緒にうちに来てください。</p>
+                <h2 id="146-LRU缓存"><a href="#146-LRU缓存" class="headerlink" title="146. LRU缓存"></a>146. LRU缓存</h2><p>请你设计并实现一个满足 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/LRU">LRU (最近最少使用) 缓存</a> 约束的数据结构。</p>
+<p>实现 <code>LRUCache</code> 类：</p>
+<ul>
+<li><code>LRUCache(int capacity)</code> 以 <strong>正整数</strong> 作为容量 <code>capacity</code> 初始化 LRU 缓存</li>
+<li><code>int get(int key)</code> 如果关键字 <code>key</code> 存在于缓存中，则返回关键字的值，否则返回 <code>-1</code> 。</li>
+<li><code>void put(int key, int value)</code> 如果关键字 <code>key</code> 已经存在，则变更其数据值 <code>value</code> ；如果不存在，则向缓存中插入该组 <code>key-value</code> 。如果插入操作导致关键字数量超过 <code>capacity</code> ，则应该 <strong>逐出</strong> 最久未使用的关键字。</li>
+</ul>
+<p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs haxe">输入<br>[<span class="hljs-string">&quot;LRUCache&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;put&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;get&quot;</span>]<br>[[<span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">2</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">1</span>], [<span class="hljs-number">3</span>], [<span class="hljs-number">4</span>]]<br>输出<br>[<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">-1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br><br>解释<br>LRUCache lRUCache = <span class="hljs-keyword">new</span> <span class="hljs-type">LRUCache</span>(<span class="hljs-number">2</span>);<br>lRUCache.put(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// 缓存是 &#123;1=1&#125;</span><br>lRUCache.put(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 缓存是 &#123;1=1, 2=2&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 返回 1</span><br>lRUCache.put(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 该操作会使得关键字 2 作废，缓存是 &#123;1=1, 3=3&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">2</span>);    <span class="hljs-comment">// 返回 -1 (未找到)</span><br>lRUCache.put(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// 该操作会使得关键字 1 作废，缓存是 &#123;4=4, 3=3&#125;</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 返回 -1 (未找到)</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">3</span>);    <span class="hljs-comment">// 返回 3</span><br>lRUCache.<span class="hljs-keyword">get</span>(<span class="hljs-number">4</span>);    <span class="hljs-comment">// 返回 4</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= capacity &lt;= 3000</code></li>
+<li><code>0 &lt;= key &lt;= 10000</code></li>
+<li><code>0 &lt;= value &lt;= 105</code></li>
+<li>最多调用 <code>2 * 105</code> 次 <code>get</code> 和 <code>put</code></li>
+</ul>
 
                 
               </div>
@@ -354,12 +313,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%97%A5%E8%AF%AD/" class="category-chain-item">日语</a>
+  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E4%B8%8A%EF%BC%8C%E8%AF%BE%E6%96%87/" class="category-chain-item">新标日初级上，课文</a>
+  <a href="/categories/Leetcode/easy/" class="category-chain-item">easy</a>
   
   
 
@@ -376,7 +335,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AF%BE%E6%96%87/" class="print-no-link">#课文</a>
+        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="print-no-link">#哈希表</a>
+      
+        <a href="/tags/%E9%93%BE%E8%A1%A8/" class="print-no-link">#链表</a>
+      
+        <a href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" class="print-no-link">#双向链表</a>
       
     </div>
   
@@ -388,8 +351,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第20课  スミスさんはピアノを弾くことができます</div>
-      <div>http://example.com/2024/07/25/第20课  スミスさんはピアノを弾くことができます/</div>
+      <div>146.LRU缓存</div>
+      <div>http://example.com/2024/06/22/146.LRU缓存/</div>
     </div>
     <div class="license-meta">
       
@@ -401,7 +364,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月25日</div>
+          <div>2024年6月22日</div>
         </div>
       
       
@@ -433,9 +396,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/30/%E7%AC%AC21%E8%AF%BE%20%20%E7%A7%81%E3%81%AF%E3%81%99%E3%81%8D%E7%84%BC%E3%81%8D%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99/" title="第21课  私はすき焼きを食べたことがあります">
+                      <a href="/2024/07/10/%E7%AC%AC13%E8%AF%BE%20%20%E6%9C%BA%E3%81%AE%E4%B8%8A%E3%81%AB%E6%9C%AC%E3%81%8C%E4%B8%89%E5%86%8A%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99/" title="第13课  机の上に本が三冊あります">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第21课  私はすき焼きを食べたことがあります</span>
+                        <span class="hidden-mobile">第13课  机の上に本が三冊あります</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -443,8 +406,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/25/1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" title="1-两数之和">
-                        <span class="hidden-mobile">1-两数之和</span>
+                      <a href="/2024/06/06/2938.%E5%8C%BA%E5%88%86%E9%BB%91%E7%90%83%E5%92%8C%E7%99%BD%E7%90%83/" title="2938.区分黑球和白球">
+                        <span class="hidden-mobile">2938.区分黑球和白球</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

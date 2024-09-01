@@ -16,22 +16,22 @@
   <meta name="author" content="Yang Zhiyuan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第20课 　スミスさんはピアノを弾くことができます基本课文 李さんは車を運転することができますか。 はい，できます。 ここで写真を撮ってもいいですか。 いいえ，ここでは摂ることができません。 何か趣味がありますか。 ええ。音楽を聞くことです。 森さんはいつギターを練習しますか。 毎晩，寝る前に練習します。 语法解释  动词的“基本型”  ​	基本型 &#x3D; 原形，是动词最基础的形态，可以理解">
+    <meta name="description" content="快速排序 ​	快速排序用到了分治思想，同样的还有归并排序。乍看起来快速排序和归并排序非常相似，都是将问题变小，先排序子串，最后合并。不同的是快速排序在划分子问题的时候经过多一步处理，将划分的两组数据划分为一大一小，这样在最后合并的时候就不必像归并排序那样再进行比较。但也正因为如此，划分的不定性使得快速排序的时间复杂度并不稳定。 ​	快速排序的基本思想：通过一趟排序将待排序列分隔成独立的两部分，其中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第20课  スミスさんはピアノを弾くことができます">
-<meta property="og:url" content="http://example.com/2024/07/25/%E7%AC%AC20%E8%AF%BE%20%20%E3%82%B9%E3%83%9F%E3%82%B9%E3%81%95%E3%82%93%E3%81%AF%E3%83%94%E3%82%A2%E3%83%8E%E3%82%92%E5%BC%BE%E3%81%8F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99/index.html">
+<meta property="og:title" content="快速排序杂谈">
+<meta property="og:url" content="http://example.com/2024/08/15/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
-<meta property="og:description" content="第20课 　スミスさんはピアノを弾くことができます基本课文 李さんは車を運転することができますか。 はい，できます。 ここで写真を撮ってもいいですか。 いいえ，ここでは摂ることができません。 何か趣味がありますか。 ええ。音楽を聞くことです。 森さんはいつギターを練習しますか。 毎晩，寝る前に練習します。 语法解释  动词的“基本型”  ​	基本型 &#x3D; 原形，是动词最基础的形态，可以理解">
+<meta property="og:description" content="快速排序 ​	快速排序用到了分治思想，同样的还有归并排序。乍看起来快速排序和归并排序非常相似，都是将问题变小，先排序子串，最后合并。不同的是快速排序在划分子问题的时候经过多一步处理，将划分的两组数据划分为一大一小，这样在最后合并的时候就不必像归并排序那样再进行比较。但也正因为如此，划分的不定性使得快速排序的时间复杂度并不稳定。 ​	快速排序的基本思想：通过一趟排序将待排序列分隔成独立的两部分，其中">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-25T14:20:03.000Z">
-<meta property="article:modified_time" content="2024-08-03T09:46:54.279Z">
+<meta property="article:published_time" content="2024-08-15T06:20:03.000Z">
+<meta property="article:modified_time" content="2024-09-01T14:04:04.835Z">
 <meta property="article:author" content="Yang Zhiyuan">
-<meta property="article:tag" content="课文">
+<meta property="article:tag" content="排序">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>第20课  スミスさんはピアノを弾くことができます - Aby5s&#39;s Blog</title>
+  <title>快速排序杂谈 - Aby5s&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第20课  スミスさんはピアノを弾くことができます"></span>
+            <span id="subtitle" data-typed-text="快速排序杂谈"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-25 22:20" pubdate>
-          2024年7月25日 晚上
+        <time datetime="2024-08-15 14:20" pubdate>
+          2024年8月15日 下午
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          406 字
+          688 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          4 分钟
+          6 分钟
         
       </span>
     
@@ -268,74 +268,31 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">第20课  スミスさんはピアノを弾くことができます</h1>
+            <h1 id="seo-header">快速排序杂谈</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="第20课-スミスさんはピアノを弾くことができます"><a href="#第20课-スミスさんはピアノを弾くことができます" class="headerlink" title="第20课 　スミスさんはピアノを弾くことができます"></a>第20课 　スミスさんはピアノを弾くことができます</h3><p><strong>基本课文</strong></p>
-<p>李さんは車を運転することができますか。</p>
-<p>はい，できます。</p>
-<p>ここで写真を撮ってもいいですか。</p>
-<p>いいえ，ここでは摂ることができません。</p>
-<p>何か趣味がありますか。</p>
-<p>ええ。音楽を聞くことです。</p>
-<p>森さんはいつギターを練習しますか。</p>
-<p>毎晩，寝る前に練習します。</p>
-<p><strong>语法解释</strong></p>
+                <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><hr>
+<p>​	快速排序用到了分治思想，同样的还有归并排序。乍看起来快速排序和归并排序非常相似，都是将问题变小，先排序子串，最后合并。不同的是快速排序在划分子问题的时候经过多一步处理，将划分的两组数据划分为一大一小，这样在最后合并的时候就不必像归并排序那样再进行比较。但也正因为如此，划分的不定性使得快速排序的时间复杂度并不稳定。</p>
+<p>​	快速排序的基本思想：通过一趟排序将待排序列分隔成独立的两部分，其中一部分记录的元素均比另一部分的元素小，则可分别对这两部分子序列继续进行排序，以达到整个序列有序。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">quickSort</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low ,<span class="hljs-type">int</span> high)</span>&#123;<br>        <span class="hljs-keyword">if</span>(low &lt; high)&#123;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">pos</span> <span class="hljs-operator">=</span> partition(arr,low,high);<br>            quickSort(arr,low,pos - <span class="hljs-number">1</span>);<br>            quickSort(arr,pos + <span class="hljs-number">1</span>,high);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">partition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr, <span class="hljs-type">int</span> low ,<span class="hljs-type">int</span> high)</span>&#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">povit</span> <span class="hljs-operator">=</span> arr[high];<br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> low - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> low; j &lt; high; j++) &#123;<br>            <span class="hljs-keyword">if</span>(arr[j] &lt; povit)&#123;<br>                swap(arr,++i,j);<br>            &#125;<br>        &#125;<br>        swap(arr,++i,high);<br>        <span class="hljs-keyword">return</span> i;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr,<span class="hljs-type">int</span> i, <span class="hljs-type">int</span> j)</span>&#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> arr[i];<br>        arr[i] = arr[j];<br>        arr[j] = temp;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span>[] arr = &#123;<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>&#125;;<br>        System.out.println(<span class="hljs-string">&quot;Unsorted array: &quot;</span> + Arrays.toString(arr));<br>        quickSort(arr,<span class="hljs-number">0</span>,arr.length - <span class="hljs-number">1</span>);<br>        System.out.println(<span class="hljs-string">&quot;Sorted array: &quot;</span> + Arrays.toString(arr));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><p>快速排序使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95">分治法open in new window</a>（Divide and conquer）策略来把一个序列分为较小和较大的 2 个子序列，然后递归地排序两个子序列。具体算法描述如下：</p>
 <ol>
-<li><strong>动词的“基本型”</strong></li>
+<li>从序列中<strong>随机</strong>挑出一个元素，做为 “基准”(<code>pivot</code>)；</li>
+<li>重新排列序列，将所有比基准值小的元素摆放在基准前面，所有比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个操作结束之后，该基准就处于数列的中间位置。这个称为分区（partition）操作。</li>
+<li>递归地把小于基准值元素的子序列和大于基准值元素的子序列进行快速排序。</li>
 </ol>
-<p>​	基本型 &#x3D; 原形，是动词最基础的形态，可以理解为其他所有形式都可由基本型变化而来。</p>
-<p>​	如果想将动词的 ます 形变为动词原形，那么：</p>
-<blockquote>
-<p>​	一类动词：去掉 ます，然后将结尾由 い 段变为 う 段。</p>
-<p>​	例如：書きます　⇒　書く　待ちます　⇒　待つ</p>
-</blockquote>
-<blockquote>
-<p>​	二类动词：去掉 ます 直接加 る。</p>
-<p>​	例如：食べます　⇒　食べる　見ます　⇒　見る</p>
-</blockquote>
-<blockquote>
-<p>​	三类动词：固定变法。</p>
-<p>​	例如：来ます　⇒　くる　します　⇒　する</p>
-</blockquote>
-<ol start="2">
-<li><strong>名词（人）+ は + 动词基本型 + ことができます</strong></li>
-</ol>
-<p>​	询问某人是否有能力做某事，こと是形式名词，本质上是把其前面的动词名词化。</p>
-<p>​	スミスさんはピアノを弾くことができます。</p>
-<p>​	森さんは中華料理を作ることができますか。</p>
-<p>​	‐　はい，できます。</p>
-<ol start="3">
-<li><strong>名词 + は + 动词基本型 + ことです</strong></li>
-</ol>
-<p>​	当谓语部分内容是动作或行为时使用。</p>
-<p>​	私の趣味は切手を集めることです。</p>
-<ol start="4">
-<li><strong>动词基本形 + 前に</strong></li>
-</ol>
-<p>​	表示一个动作在另一个动作之前发生。</p>
-<p>​	こちらへ来る前に電話をかけてください。</p>
-<ol start="5">
-<li><strong>疑问词 + か</strong></li>
-</ol>
-<p>​	表示 “某x”，いつか　⇒　某时、 どこか　⇒　某地、 誰か　⇒　某人</p>
-<p>​	</p>
-<p><strong>应用课文</strong></p>
-<p>李さん，春節は中国へ帰りますか。</p>
-<p>いいえ，今日本の仕事が忙しいですから，帰りません。</p>
-<p>じゃあ，一緒に何処かへ行きませんか。</p>
-<p>横浜の中華街へ行きましょうよ。中国の獅子舞を見るかとができますよ。</p>
-<p>料理はどうでいたか。</p>
-<p>とても美味しかったですよ。特にギョーザは。</p>
-<p>李さんはギョーザを作ることができますか。</p>
-<p>ええ。北京では春節の前に，家族みんなでギョーザを作ります。</p>
-<p>手作りのギョーザは皮が美味しいですよね。</p>
-<p>小野さんも作ることができますか。</p>
-<p>ええ，もちろん。私の趣味は美味しい物を作ることですから。</p>
-<p>本当ですか？じゃあ，いつか御馳走してください。</p>
-<p>いいですよ。李さんが帰国する前に，ぜひ一緒にうちに来てください。</p>
+<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h3><ul>
+<li>稳定性：不稳定</li>
+<li>时间复杂度：最佳：O(nlogn), 最差：O(n^2),平均：O(nlogn)</li>
+<li>空间复杂度：O(logn)</li>
+</ul>
+<p>在实际生产环境中最常用的排序算法之一，优点是<strong>平均时间复杂度较低，适用于大规模数据的排序</strong>。此外，由于它是原地排序，因此在内存使用方面也具有优势。</p>
+<p>但同时，快速排序的缺点在于其最坏情况下的时间复杂度较高，且<strong>不稳定</strong>（即相等元素的相对顺序可能会改变）。</p>
 
                 
               </div>
@@ -354,12 +311,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%97%A5%E8%AF%AD/" class="category-chain-item">日语</a>
+  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E4%B8%8A%EF%BC%8C%E8%AF%BE%E6%96%87/" class="category-chain-item">新标日初级上，课文</a>
+  <a href="/categories/Leetcode/%E6%9D%82%E8%B0%88/" class="category-chain-item">杂谈</a>
   
   
 
@@ -376,7 +333,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AF%BE%E6%96%87/" class="print-no-link">#课文</a>
+        <a href="/tags/%E6%8E%92%E5%BA%8F/" class="print-no-link">#排序</a>
       
     </div>
   
@@ -388,8 +345,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第20课  スミスさんはピアノを弾くことができます</div>
-      <div>http://example.com/2024/07/25/第20课  スミスさんはピアノを弾くことができます/</div>
+      <div>快速排序杂谈</div>
+      <div>http://example.com/2024/08/15/快速排序/</div>
     </div>
     <div class="license-meta">
       
@@ -401,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月25日</div>
+          <div>2024年8月15日</div>
         </div>
       
       
@@ -433,9 +390,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/30/%E7%AC%AC21%E8%AF%BE%20%20%E7%A7%81%E3%81%AF%E3%81%99%E3%81%8D%E7%84%BC%E3%81%8D%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99/" title="第21课  私はすき焼きを食べたことがあります">
+                      <a href="/2024/08/18/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第21课  私はすき焼きを食べたことがあります</span>
+                        <span class="hidden-mobile">归并排序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -443,8 +400,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/25/1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" title="1-两数之和">
-                        <span class="hidden-mobile">1-两数之和</span>
+                      <a href="/2024/08/12/844.%E6%AF%94%E8%BE%83%E5%90%AB%E9%80%80%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="844.比较含退格的字符串">
+                        <span class="hidden-mobile">844.比较含退格的字符串</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
