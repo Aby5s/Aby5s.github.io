@@ -16,22 +16,22 @@
   <meta name="author" content="Yang Zhiyuan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="归并排序 ​	归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法 (Divide and Conquer) 的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为 2 - 路归并。 ​	和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始">
+    <meta name="description" content="2024.考试的最大困扰度一位老师正在出一场由 n 道判断题构成的考试，每道题的答案为 true （用 &#39;T&#39; 表示）或者 false （用 &#39;F&#39; 表示）。老师想增加学生对自己做出答案的不确定性，方法是 最大化 有 连续相同 结果的题数。（也就是连续出现 true 或者连续出现 false）。 给你一个字符串 answerKey ，其中 answerKey[i]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="归并排序">
-<meta property="og:url" content="http://example.com/2024/08/18/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/index.html">
+<meta property="og:title" content="最喜欢的一集--滑动窗口 + ASCII码判字符">
+<meta property="og:url" content="http://example.com/2024/09/02/%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%80%E9%9B%86-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3-ASCII%E7%A0%81%E5%88%A4%E5%AD%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Aby5s&#39;s Blog">
-<meta property="og:description" content="归并排序 ​	归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法 (Divide and Conquer) 的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为 2 - 路归并。 ​	和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始">
+<meta property="og:description" content="2024.考试的最大困扰度一位老师正在出一场由 n 道判断题构成的考试，每道题的答案为 true （用 &#39;T&#39; 表示）或者 false （用 &#39;F&#39; 表示）。老师想增加学生对自己做出答案的不确定性，方法是 最大化 有 连续相同 结果的题数。（也就是连续出现 true 或者连续出现 false）。 给你一个字符串 answerKey ，其中 answerKey[i]">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-18T01:12:23.000Z">
-<meta property="article:modified_time" content="2024-09-01T14:03:43.411Z">
+<meta property="article:published_time" content="2024-09-02T13:17:15.000Z">
+<meta property="article:modified_time" content="2024-09-02T13:42:32.395Z">
 <meta property="article:author" content="Yang Zhiyuan">
-<meta property="article:tag" content="排序">
+<meta property="article:tag" content="滑动窗口">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>归并排序 - Aby5s&#39;s Blog</title>
+  <title>最喜欢的一集--滑动窗口 + ASCII码判字符 - Aby5s&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归并排序"></span>
+            <span id="subtitle" data-typed-text="最喜欢的一集--滑动窗口 + ASCII码判字符"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-18 09:12" pubdate>
-          2024年8月18日 上午
+        <time datetime="2024-09-02 21:17" pubdate>
+          2024年9月2日 晚上
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          626 字
+          985 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          6 分钟
+          9 分钟
         
       </span>
     
@@ -268,30 +268,60 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">归并排序</h1>
+            <h1 id="seo-header">最喜欢的一集--滑动窗口 + ASCII码判字符</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><hr>
-<p>​	归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法 (Divide and Conquer) 的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为 2 - 路归并。</p>
-<p>​	和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是 O(nlogn) 的时间复杂度。代价是需要额外的内存空间。</p>
-<h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><p>归并排序算法是一个递归过程，边界条件为当输入序列仅有一个元素时，直接返回，具体过程如下：</p>
-<ol>
-<li>如果输入内只有一个元素，则直接返回，否则将长度为 n 的输入序列分成两个长度为 n&#x2F;2 的子序列；</li>
-<li>分别对这两个子序列进行归并排序，使子序列变为有序状态；</li>
-<li>设定两个指针，分别指向两个已经排序子序列的起始位置；</li>
-<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间（用于存放排序结果），并移动指针到下一位置；</li>
-<li>重复步骤 3 ~ 4 直到某一指针达到序列尾；</li>
-<li>将另一序列剩下的所有元素直接复制到合并序列尾。</li>
-</ol>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] mergeSort(<span class="hljs-type">int</span>[] arr)&#123;<br>        <span class="hljs-keyword">if</span>(arr.length &lt;= <span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> arr;<br>        &#125;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> arr.length / <span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span>[] arr1 = Arrays.copyOfRange(arr,<span class="hljs-number">0</span>,mid);<br>        <span class="hljs-comment">//特别需要注意的两个地方，Arrays类下的copyOfRange方法，其表示的范围为左闭右开。</span><br>        <span class="hljs-type">int</span>[] arr2 = Arrays.copyOfRange(arr,mid,arr.length);<br>        <span class="hljs-keyword">return</span> merge(mergeSort(arr1),mergeSort(arr2));<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] merge(<span class="hljs-type">int</span>[] arr1, <span class="hljs-type">int</span>[] arr2)&#123;<br>        <span class="hljs-type">int</span>[] sorted_arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[arr1.length + arr2.length];<br>        <span class="hljs-type">int</span> <span class="hljs-variable">idx</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, idx1 = <span class="hljs-number">0</span>, idx2 = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(idx1 &lt; arr1.length &amp;&amp; idx2 &lt; arr2.length)&#123;<br>            <span class="hljs-keyword">if</span>(arr1[idx1] &lt; arr2[idx2])&#123;<br>                sorted_arr[idx++] = arr1[idx1++];<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                sorted_arr[idx++] = arr2[idx2++];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(idx1 &lt; arr1.length)&#123;<br>            <span class="hljs-keyword">while</span>(idx1 &lt; arr1.length)&#123;<br>                sorted_arr[idx++] = arr1[idx1++];<br>            &#125;<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">while</span>(idx2 &lt; arr2.length)&#123;<br>                sorted_arr[idx++] = arr2[idx2++];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> sorted_arr;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span>[] arr = &#123;<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>&#125;;<br>        System.out.println(<span class="hljs-string">&quot;Unsorted array: &quot;</span> + Arrays.toString(arr));<br>        System.out.println(<span class="hljs-string">&quot;Sorted array: &quot;</span> + Arrays.toString(mergeSort(arr)));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><ul>
-<li><strong>稳定性</strong>：稳定</li>
-<li><strong>时间复杂度</strong>：最佳：O(nlogn)， 最差：O(nlogn)， 平均：O(nlogn)</li>
-<li><strong>空间复杂度</strong>：O(n)</li>
+                <h3 id="2024-考试的最大困扰度"><a href="#2024-考试的最大困扰度" class="headerlink" title="2024.考试的最大困扰度"></a>2024.考试的最大困扰度</h3><p>一位老师正在出一场由 <code>n</code> 道判断题构成的考试，每道题的答案为 true （用 <code>&#39;T&#39;</code> 表示）或者 false （用 <code>&#39;F&#39;</code> 表示）。老师想增加学生对自己做出答案的不确定性，方法是 <strong>最大化</strong> 有 <strong>连续相同</strong> 结果的题数。（也就是连续出现 true 或者连续出现 false）。</p>
+<p>给你一个字符串 <code>answerKey</code> ，其中 <code>answerKey[i]</code> 是第 <code>i</code> 个问题的正确结果。除此以外，还给你一个整数 <code>k</code> ，表示你能进行以下操作的最多次数：</p>
+<ul>
+<li>每次操作中，将问题的正确答案改为 <code>&#39;T&#39;</code> 或者 <code>&#39;F&#39;</code> （也就是将 <code>answerKey[i]</code> 改为 <code>&#39;T&#39;</code> 或者 <code>&#39;F&#39;</code> ）。</li>
 </ul>
+<p>请你返回在不超过 <code>k</code> 次操作的情况下，<strong>最大</strong> 连续 <code>&#39;T&#39;</code> 或者 <code>&#39;F&#39;</code> 的数目。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs 1c">输入：answerKey = <span class="hljs-string">&quot;TTFF&quot;</span>, k = <span class="hljs-number">2</span><br>输出：<span class="hljs-number">4</span><br>解释：我们可以将两个 &#x27;F&#x27; 都变为 &#x27;T&#x27; ，得到 answerKey = <span class="hljs-string">&quot;TTTT&quot;</span> 。<br>总共有四个连续的 &#x27;T&#x27; 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 1c">输入：answerKey = <span class="hljs-string">&quot;TFFT&quot;</span>, k = <span class="hljs-number">1</span><br>输出：<span class="hljs-number">3</span><br>解释：我们可以将最前面的 &#x27;T&#x27; 换成 &#x27;F&#x27; ，得到 answerKey = <span class="hljs-string">&quot;FFFT&quot;</span> 。<br>或者，我们可以将第二个 &#x27;T&#x27; 换成 &#x27;F&#x27; ，得到 answerKey = <span class="hljs-string">&quot;TFFF&quot;</span> 。<br>两种情况下，都有三个连续的 &#x27;F&#x27; 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 1c">输入：answerKey = <span class="hljs-string">&quot;TTFTTFTT&quot;</span>, k = <span class="hljs-number">1</span><br>输出：<span class="hljs-number">5</span><br>解释：我们可以将第一个 &#x27;F&#x27; 换成 &#x27;T&#x27; ，得到 answerKey = <span class="hljs-string">&quot;TTTTTFTT&quot;</span> 。<br>或者我们可以将第二个 &#x27;F&#x27; 换成 &#x27;T&#x27; ，得到 answerKey = <span class="hljs-string">&quot;TTFTTTTT&quot;</span> 。<br>两种情况下，都有五个连续的 &#x27;T&#x27; 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>n == answerKey.length</code></li>
+<li><code>1 &lt;= n &lt;= 5 * 104</code></li>
+<li><code>answerKey[i]</code> 要么是 <code>&#39;T&#39;</code> ，要么是 <code>&#39;F&#39;</code></li>
+<li><code>1 &lt;= k &lt;= n</code></li>
+</ul>
+<hr>
+<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>​	最终目的是得到最多含k个’T’或’F’的字符串，题目中给的次数k为允许纠正的次数。若题目中仅含k个’T’或’F’，通过k次’操作’，将字符串中的k个’T’或’F’更改，即可保证为连续的相同字符组成的字符串，那么看到连续字符串，很容易就能想到利用滑动窗口来进行解题。</p>
+<p>​	直接套滑动窗口的模板，统计 <span class="label label-primary">right</span> 对应字符的次数，当字符串中的’T’或’F’的次数均超过k次后，再通过右移 <span class="label label-success">left</span> 来减少对应字符的字数，直到两者任意一字符的数量减少到k为止。</p>
+<div class="note note-info">
+            <p>注意：可以直接通过if-else结构，通过比较字符，来达到判断对应位置字符是’T’或’F’，但这里介绍一种时间复杂度更低的判断方法——位运算。</p>
+          </div>
+
+<p><code>&#39;T&#39;</code> 的 ASCII 值是 84，二进制是 <code>01010100</code>。</p>
+<p><code>&#39;F&#39;</code> 的 ASCII 值是 70，二进制是 <code>01000110</code>。</p>
+<p><code>&gt;&gt; 1</code> 操作将字符的 ASCII 值右移一位。例如，’T’ 的二进制变为 <code>00101010</code>，’F’ 的二进制变为 <code>00100011</code>。</p>
+<p><code>&amp; 1</code> 操作是位与操作，用来获取右移后的最右边一位的值（即判断该值是奇数还是偶数）。</p>
+<ul>
+<li>对于 ‘T’，<code>01010100</code> 右移一位后得到 <code>00101010</code>，最后一位是 0。</li>
+<li>对于 ‘F’，<code>01000110</code> 右移一位后得到 <code>00100011</code>，最后一位是 1。</li>
+</ul>
+<p><code>&amp; 1</code> 的作用是<strong>提取这个右移后的结果的最右一位</strong>：</p>
+<ul>
+<li><code>00101010 &amp; 00000001</code> 对应的结果是 <code>0</code>（<code>T</code> 的右移后结果），</li>
+<li><code>00100011 &amp; 00000001</code> 对应的结果是 <code>1</code>（<code>F</code> 的右移后结果）。</li>
+</ul>
+<p>因此，<code>cnt[s[right] &gt;&gt; 1 &amp; 1]++</code> 的效果是：</p>
+<ul>
+<li><code>cnt[0]++</code> 对应 ‘T’，表示 ‘T’ 的数量加一。</li>
+<li><code>cnt[1]++</code> 对应 ‘F’，表示 ‘F’ 的数量加一。</li>
+</ul>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxConsecutiveAnswers</span><span class="hljs-params">(String answerKey, <span class="hljs-type">int</span> k)</span> &#123;<br>        <span class="hljs-type">char</span>[] c = answerKey.toCharArray();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span>[] cnt = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; right &lt; c.length; right++) &#123;<br>            cnt[c[right] &gt;&gt; <span class="hljs-number">1</span> &amp; <span class="hljs-number">1</span>]++;<br>            <span class="hljs-keyword">while</span>(cnt[<span class="hljs-number">0</span>] &gt; k &amp;&amp; cnt[<span class="hljs-number">1</span>] &gt; k)&#123;<br>                cnt[c[left++] &gt;&gt; <span class="hljs-number">1</span> &amp; <span class="hljs-number">1</span>]--;<br>            &#125;<br>            ans = Math.max(ans,right - left + <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -315,7 +345,7 @@
   
     <span>></span>
     
-  <a href="/categories/Leetcode/%E6%9D%82%E8%B0%88/" class="category-chain-item">杂谈</a>
+  <a href="/categories/Leetcode/medium/" class="category-chain-item">medium</a>
   
   
 
@@ -332,7 +362,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%8E%92%E5%BA%8F/" class="print-no-link">#排序</a>
+        <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" class="print-no-link">#滑动窗口</a>
       
     </div>
   
@@ -344,8 +374,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>归并排序</div>
-      <div>http://example.com/2024/08/18/归并排序/</div>
+      <div>最喜欢的一集--滑动窗口 + ASCII码判字符</div>
+      <div>http://example.com/2024/09/02/最喜欢的一集-滑动窗口-ASCII码判字符/</div>
     </div>
     <div class="license-meta">
       
@@ -357,7 +387,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月18日</div>
+          <div>2024年9月2日</div>
         </div>
       
       
@@ -389,18 +419,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/02/%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%80%E9%9B%86-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3-ASCII%E7%A0%81%E5%88%A4%E5%AD%97%E7%AC%A6/" title="最喜欢的一集--滑动窗口 + ASCII码判字符">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">最喜欢的一集--滑动窗口 + ASCII码判字符</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/15/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="快速排序杂谈">
-                        <span class="hidden-mobile">快速排序杂谈</span>
+                      <a href="/2024/08/18/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" title="归并排序">
+                        <span class="hidden-mobile">归并排序</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
